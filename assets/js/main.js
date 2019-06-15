@@ -1,6 +1,9 @@
 import {Evento} from "./event.js";
 
-let alerta = new Evento ("Evento detenido por el usuario");
-//alerta.enviarAlerta();
+const alerta = new Evento ("Evento detenido por el usuario");
 
-document.addEventListener("submit", alerta.enviarAlerta);
+const mostrar = function () {
+  alerta.enviarAlerta()
+}
+
+document.addEventListener("submit", mostrar);
