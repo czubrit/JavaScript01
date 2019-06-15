@@ -1,9 +1,10 @@
 import {Evento} from "./event.js";
 
-const alerta = new Evento ("Evento detenido por el usuario");
+//TODO: Imprimir en la consola los valores que se obtienen del formulario.
 
 const mostrar = function (event) {
   event.preventDefault();
+  const alerta = new Evento ("Evento detenido por el usuario");
   alerta.enviarAlerta()
 }
 
