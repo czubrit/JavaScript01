@@ -3,7 +3,7 @@ class Evento {
         this.mensaje = mensaje;
     }
     enviarAlerta() {
-        alert(this.mensaje);
+        alert (this.mensaje);
     }
 }
 
