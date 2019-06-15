@@ -1,4 +1,4 @@
-export class Evento {
+class Evento {
     constructor(mensaje) {
         this.mensaje = mensaje;
     }
@@ -6,3 +6,5 @@ export class Evento {
         alert(this.mensaje);
     }
 }
+
+export {Evento};
