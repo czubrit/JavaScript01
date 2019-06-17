@@ -4,8 +4,8 @@ import {Evento} from "./event.js";
 
 const mostrar = function (event) {
   event.preventDefault();
-  const alerta = new Evento ("Evento detenido por el usuario");
-  alerta.enviarAlerta()
+  let alerta = new Evento (document.forms);
+  alerta.enviarAlerta();
 }
 
 document.addEventListener("submit", mostrar, false);
