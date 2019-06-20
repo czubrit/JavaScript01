@@ -1,5 +1,7 @@
 class Evento {
     constructor(forms) {
+        this.longitud;
+        this.form;
         this.forms = forms;
     }
     enviarAlerta() {
