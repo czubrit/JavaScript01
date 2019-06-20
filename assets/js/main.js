@@ -6,7 +6,7 @@ const mostrar = function (event) {
   alerta.enviarAlerta();
 }
 
-function navegar(event){
+const navegar = function (event) {
   event.preventDefault();
   let contacto = document.getElementById("contacto");
   contacto.style.display = "block";
