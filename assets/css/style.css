@@ -3,3 +3,13 @@ p {
     margin-bottom: 2px;
     display: block;
 }
+
+input, textarea {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.pure-g {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

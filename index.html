@@ -4,26 +4,55 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JavaScript Example 01</title>
+    <title>Galeria de Fotos</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
   </head>
   <body>
-  <h3>Ejemplo de JavaScript 01</h3>
-    <form name="principal" action="hola.php" method="post">
-      <p>Nombre: <br />
-      <input type="text" name="nombre" placeholder="Introduce tu nombre"></p>
-      
-      <p>Telefono:<br />
-      <input type="number" name="telefono" placeholder="Introduce tu telefono"></p>
-      
-      <p>Correo: <br />
-      <input type="email" name="email" placeholder="Introduce tu email"></p>
-      
-      <p>Mensaje: <br />
-      <input type="text" name="mensaje" placeholder="Introduce el mensaje"></p>
-      
-      <input type="submit" value="Enviar">
-    </form>
+    <div class="header">
+      <div class="pure-menu pure-menu-horizontal">
+        <a class="pure-menu-heading" href="">Galeria de Fotos</a>
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="" class="pure-menu-link">Galeria</a></li>
+            <li class="pure-menu-item"><a id="to-contacto" href="" class="pure-menu-link">Quienes somos</a></li>
+          </ul>
+      </div>
+    </div>
+    <!-- Galeria de Fotos -->
+    <div id="galeria">
+
+    </div>
+    <!-- Contacto -->
+    <div id="contacto" hidden>
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <h3>Deja tus datos de contacto</h3>
+        </div>
+        
+        <div class="pure-u-1">
+          <form class="pure-form pure-form-stacked" name="principal" action="hola.php" method="post">
+            <fieldset>
+              <legend>Contacto</legend>
+              <span class="pure-form-message">Todos los campos son obligatorios.</span>
+              <br />
+              <label for="nombre">Nombre: </label>
+              <input class="pure-input-1" name="nombre" id="nombre" type="text" placeholder="Introduce tu Nombre" required>
+            
+              <label for="telefono">Telefono: </label>
+              <input class="pure-input-1" name="telefono" id="telefono" type="number" placeholder="Introduce tu Numero Telefonico" required>
+            
+              <label for="email">Email: </label>
+              <input class="pure-input-1" name="email" id="email" type="email" placeholder="Introduce tu email" required>
+
+              <label for="mensaje">Comentario: </label>
+              <textarea class="pure-input-1" name="mensaje" id="mensaje" rows="3" required></textarea>
+              <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="./assets/js/main.js" type="module"></script>
   </body>
 </html>
