@@ -10,7 +10,6 @@ class Evento {
         for (let i = 0; i < this.longitud; i++) {
             console.log(this.form[i]["name"] + " : " + this.form[i]["value"]);
         }
-        //console.log (this.form);
     }
 }
 

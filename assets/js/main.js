@@ -1,21 +1,20 @@
-import {Evento} from "./event.js";
+import {Evento} from "./evento.js";
+import {Galeria} from "./galeria.js";
+import {Menu} from "./menu.js";
+
+let galeria = new Galeria('https://picsum.photos/v2/list');
+let menu = new Menu();
+let html;
+
+galeria.set_galeria();
+html = galeria.get_galeria();
+document.getElementById("fotos").innerHTML = html;
+
+
 
 let contacto = document.getElementById("contacto");
 let galeria = document.getElementById("galeria");
 
-//Cargar galeria
-let html = "";
-fetch('https://picsum.photos/v2/list')
-.then(response => response.json())
-.then(data=>{
-  data.forEach(element => {
-    html += "<h4> Autor: " + element.author + "</h4><img src=\"" + element.download_url + "\" width=\"220px\"><br />";
-    //console.log(html);
-  });
-  document.getElementById("fotos").innerHTML = html;
-  //console.log(data);
-})
-.catch(error => console.log(error))
 
 const mostrar = function (event) {
   event.preventDefault();
