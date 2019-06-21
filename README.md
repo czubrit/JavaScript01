@@ -1,7 +1,8 @@
 # JavaScript01
 # Development tools
+
 #link
-https://czubrit.github.io/JavaScript01/index.html
+https://czubrit.github.io/javascript01/index.html
 
 Ejemplo de JavaScript para el eventpreventDefault.
 
