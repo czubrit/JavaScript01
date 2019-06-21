@@ -2,17 +2,10 @@ import {Evento} from "./evento.js";
 import {Galeria} from "./galeria.js";
 import {Menu} from "./menu.js";
 
-let galeria = new Galeria('https://picsum.photos/v2/list');
-let html;
-//let menu = new Menu();
-
-galeria.set_galeria();
-html = galeria.get_galeria();
+let photos = new Galeria('https://picsum.photos/v2/list');
+let html = photos.get_galeria();
 document.getElementById("fotos").innerHTML = html;
 
-
-let contacto = document.getElementById("contacto");
-let galeria = document.getElementById("galeria");
 
 const mostrar = function (event) {
   event.preventDefault();
@@ -20,19 +13,13 @@ const mostrar = function (event) {
   alerta.enviarAlerta();
 }
 
-const navegar_contacto = function (event) {
-  event.preventDefault();  
-  galeria.style.display = "none";
-  contacto.style.display = "block";
-}
-
-const navegar_galeria = function (event)  {
+const navegar = function (event)  {
   event.preventDefault();
-  contacto.style.display = "none";
-  galeria.style.display = "block";
+  let menu = new Menu(this);
+  menu.cambiarVista();
 }
 
 
 document.addEventListener("submit", mostrar, false);
-document.getElementById("to-contacto").addEventListener("click", navegar_contacto, false);
-document.getElementById("to-galeria").addEventListener("click", navegar_galeria, false);
+document.getElementById("to-contacto").addEventListener("click", navegar, false);
+document.getElementById("to-galeria").addEventListener("click", navegar, false);

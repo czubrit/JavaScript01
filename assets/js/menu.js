@@ -1,14 +1,17 @@
 class Menu {
-  constructor(galeria, contacto) {
-    this.galeria = galeria;
-    this.contacto = contacto;
+  constructor(vista) {
+    this.contacto = document.getElementById("contacto");
+    this.galeria = document.getElementById("galeria");
+    this.vista = vista;
   }
-  
-  enviarAlerta() {
-    this.longitud = this.forms[0].length - 1;
-    this.form = this.forms[0];
-    for (let i = 0; i < this.longitud; i++) {
-      console.log(this.form[i]["name"] + " : " + this.form[i]["value"]);
+  cambiarVista() {
+    if (this.vista['id'] === 'to-contacto') {
+      this.galeria.style.display = "none";
+      this.contacto.style.display = "block";
+    }
+    else {
+      this.contacto.style.display = "none";
+      this.galeria.style.display = "block";
     }
   }
 }
