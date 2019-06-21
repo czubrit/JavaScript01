@@ -4,16 +4,15 @@ class Galeria {
     this.html = "";
   }
   get_galeria() {
-    this.html = fetch(this.url)
+    fetch(this.url)
     .then(response => response.json())
     .then(data=>{
       data.forEach(element => {
         this.html += "<h4> Autor: " + element.author + "</h4><img src=\"" + element.download_url + "\" width=\"220px\"><br />";
+        document.getElementById("fotos").innerHTML = this.html;
       });
-      return this.html;
     })
     .catch(error => console.log(error));
-    return this.html;
   }
 }
 

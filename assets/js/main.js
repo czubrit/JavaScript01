@@ -3,9 +3,7 @@ import {Galeria} from "./galeria.js";
 import {Menu} from "./menu.js";
 
 let photos = new Galeria('https://picsum.photos/v2/list');
-let html = photos.get_galeria();
-document.getElementById("fotos").innerHTML = html;
-
+photos.get_galeria();
 
 const mostrar = function (event) {
   event.preventDefault();
@@ -18,7 +16,6 @@ const navegar = function (event)  {
   let menu = new Menu(this);
   menu.cambiarVista();
 }
-
 
 document.addEventListener("submit", mostrar, false);
 document.getElementById("to-contacto").addEventListener("click", navegar, false);
