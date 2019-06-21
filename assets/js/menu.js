@@ -1,7 +1,7 @@
 class Menu {
-  constructor(view, noview) {
-    this.view = view;
-    this.noview = noview;
+  constructor(galeria, contacto) {
+    this.galeria = galeria;
+    this.contacto = contacto;
   }
   
   enviarAlerta() {

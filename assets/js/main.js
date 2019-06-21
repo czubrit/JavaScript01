@@ -3,18 +3,16 @@ import {Galeria} from "./galeria.js";
 import {Menu} from "./menu.js";
 
 let galeria = new Galeria('https://picsum.photos/v2/list');
-let menu = new Menu();
 let html;
+//let menu = new Menu();
 
 galeria.set_galeria();
 html = galeria.get_galeria();
 document.getElementById("fotos").innerHTML = html;
 
 
-
 let contacto = document.getElementById("contacto");
 let galeria = document.getElementById("galeria");
-
 
 const mostrar = function (event) {
   event.preventDefault();
